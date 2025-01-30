@@ -1,0 +1,84 @@
+ 10:11:48 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'MMOpen' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE MMOpen 
+ 
+ 10:11:48 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'Team'.
+ INSERT INTO MMOpen (',Posizione','',Team','',Totale Punti','',Score 1','',Posizione Prova 1','',Score 2','',Posizione Prova 2','',Score 3','',Posizione Prova 3','',Score 4','',Posizione Prova 4','',Score 5','',Posizione Prova 5','',Componenti') VALUES ([1],[CIAO432],[35],[0.25],[6],[200],[2],[7.4],[15],[0.25],[6],[0.25],[6],[PRIMO]),([2],[ciao2],[39],[0.29166666666667],[7],[190],[5],[8.1],[14],[0.29166666666667],[7],[0.29166666666667],[7],[SECONDO]),([3],[c4],[42],[0.33333333333333],[8],[180],[8],[8.8],[13],[0.33333333333333],[8],[0.33333333333333],[8],[TERZO]),([4],[blu],[42],[0.041666666666667],[1],[120],[14],[3],[19],[0.041666666666667],[1],[0.45833333333333],[11],[QUARTO]),([5],[ciao3],[45],[0.375],[9],[170],[17],[9.5],[12],[0.375],[9],[0.375],[9],[QUINTO]),([6],[asfvs],[47],[0.79166666666667],[19],[195],[0],[17.9],[2],[0.79166666666667],[19],[0.16666666666667],[4],[SESTO]),([7],[fvdsa],[47],[0.83333333333333],[20],[220],[0],[18.6],[1],[0.83333333333333],[20],[0.20833333333333],[5],[SETTIMO]),([8],[verde],[47],[0.083333333333333],[2],[119],[5],[0.1875],[19],[0.083333333333333],[2],[0.5],[12],[OTTAVO]),([9],[blu2],[48],[0.66666666666667],[16],[120],[0],[15.8],[5],[0.66666666666667],[16],[0.041666666666667],[1],[NONO]),([10],[asfv],[48],[0.75],[18],[170],[0],[17.2],[3],[0.75],[18],[0.125],[3],[DECIMO]),([11],[c5],[49],[0.41666666666667],[10],[160],[6],[10.2],[11],[0.41666666666667],[10],[0.41666666666667],[10],[UNDICESIMO]),([12],[vfs],[49],[0.70833333333333],[17],[145],[0],[16.5],[4],[0.70833333333333],[17],[0.083333333333333],[2],[DODICESIMO]),([13],[giallo],[49],[0.125],[3],[118],[18],[5],[17],[0.125],[3],[0.54166666666667],[13],[TREDICESIMO]),([14],[calto],[53],[0.16666666666667],[4],[117],[20],[5],[17],[0.16666666666667],[4],[0.58333333333333],[14],[QUATTORDICESIMO]),([15],[cane],[56],[0.20833333333333],[5],[116],[10],[6],[16],[0.20833333333333],[5],[0.625],[15],[QUINDICESIMO]),([16],[gregf],[64],[0.45833333333333],[11],[55],[0],[11.6],[10],[0.45833333333333],[11],[0.66666666666667],[16],[SEDICESIMO]),([17],[dsafg],[67],[0.5],[12],[50],[0],[12.3],[9],[0.5],[12],[0.70833333333333],[17],[DICIASETTESIMO]),([18],[dsfgveds],[70],[0.54166666666667],[13],[45],[0],[13],[8],[0.54166666666667],[13],[0.75],[18],[DICIOTTESIMO]),([19],[sfgvs],[73],[0.58333333333333],[14],[40],[0],[13.7],[7],[0.58333333333333],[14],[0.79166666666667],[19],[DICIANNOVESIMO]),([20],[fgads],[76],[0.625],[15],[35],[0],[14.4],[6],[0.625],[15],[0.83333333333333],[20],[VENTESIMO]), 
+ 
+ 10:12:46 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'MMOpen' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE MMOpen 
+ 
+ 10:12:46 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di ','.
+ INSERT INTO MMOpen ([Posizione],[Team],[Totale Punti],[Score 1],[Posizione Prova 1],[Score 2],[Posizione Prova 2],[Score 3],[Posizione Prova 3],[Score 4],[Posizione Prova 4],[Score 5],[Posizione Prova 5],[Componenti]) VALUES ('1','CIAO432','35','0.25','6','200','2','7.4','15','0.25','6','0.25','6','PRIMO'),('2','ciao2','39','0.29166666666667','7','190','5','8.1','14','0.29166666666667','7','0.29166666666667','7','SECONDO'),('3','c4','42','0.33333333333333','8','180','8','8.8','13','0.33333333333333','8','0.33333333333333','8','TERZO'),('4','blu','42','0.041666666666667','1','120','14','3','19','0.041666666666667','1','0.45833333333333','11','QUARTO'),('5','ciao3','45','0.375','9','170','17','9.5','12','0.375','9','0.375','9','QUINTO'),('6','asfvs','47','0.79166666666667','19','195','0','17.9','2','0.79166666666667','19','0.16666666666667','4','SESTO'),('7','fvdsa','47','0.83333333333333','20','220','0','18.6','1','0.83333333333333','20','0.20833333333333','5','SETTIMO'),('8','verde','47','0.083333333333333','2','119','5','0.1875','19','0.083333333333333','2','0.5','12','OTTAVO'),('9','blu2','48','0.66666666666667','16','120','0','15.8','5','0.66666666666667','16','0.041666666666667','1','NONO'),('10','asfv','48','0.75','18','170','0','17.2','3','0.75','18','0.125','3','DECIMO'),('11','c5','49','0.41666666666667','10','160','6','10.2','11','0.41666666666667','10','0.41666666666667','10','UNDICESIMO'),('12','vfs','49','0.70833333333333','17','145','0','16.5','4','0.70833333333333','17','0.083333333333333','2','DODICESIMO'),('13','giallo','49','0.125','3','118','18','5','17','0.125','3','0.54166666666667','13','TREDICESIMO'),('14','calto','53','0.16666666666667','4','117','20','5','17','0.16666666666667','4','0.58333333333333','14','QUATTORDICESIMO'),('15','cane','56','0.20833333333333','5','116','10','6','16','0.20833333333333','5','0.625','15','QUINDICESIMO'),('16','gregf','64','0.45833333333333','11','55','0','11.6','10','0.45833333333333','11','0.66666666666667','16','SEDICESIMO'),('17','dsafg','67','0.5','12','50','0','12.3','9','0.5','12','0.70833333333333','17','DICIASETTESIMO'),('18','dsfgveds','70','0.54166666666667','13','45','0','13','8','0.54166666666667','13','0.75','18','DICIOTTESIMO'),('19','sfgvs','73','0.58333333333333','14','40','0','13.7','7','0.58333333333333','14','0.79166666666667','19','DICIANNOVESIMO'),('20','fgads','76','0.625','15','35','0','14.4','6','0.625','15','0.83333333333333','20','VENTESIMO'), 
+ 
+ 10:14:14 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'MMOpen' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE MMOpen 
+ 
+ 10:14:14 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di ','.
+ INSERT INTO MMOpen ([Posizione],[Team],[Totale Punti],[Score 1],[Posizione Prova 1],[Score 2],[Posizione Prova 2],[Score 3],[Posizione Prova 3],[Score 4],[Posizione Prova 4],[Score 5],[Posizione Prova 5],[Componenti]) VALUES ('1','CIAO432','35','0.25','6','200','2','7.4','15','0.25','6','0.25','6','PRIMO'),('2','ciao2','39','0.29166666666667','7','190','5','8.1','14','0.29166666666667','7','0.29166666666667','7','SECONDO'),('3','c4','42','0.33333333333333','8','180','8','8.8','13','0.33333333333333','8','0.33333333333333','8','TERZO'),('4','blu','42','0.041666666666667','1','120','14','3','19','0.041666666666667','1','0.45833333333333','11','QUARTO'),('5','ciao3','45','0.375','9','170','17','9.5','12','0.375','9','0.375','9','QUINTO'),('6','asfvs','47','0.79166666666667','19','195','0','17.9','2','0.79166666666667','19','0.16666666666667','4','SESTO'),('7','fvdsa','47','0.83333333333333','20','220','0','18.6','1','0.83333333333333','20','0.20833333333333','5','SETTIMO'),('8','verde','47','0.083333333333333','2','119','5','0.1875','19','0.083333333333333','2','0.5','12','OTTAVO'),('9','blu2','48','0.66666666666667','16','120','0','15.8','5','0.66666666666667','16','0.041666666666667','1','NONO'),('10','asfv','48','0.75','18','170','0','17.2','3','0.75','18','0.125','3','DECIMO'),('11','c5','49','0.41666666666667','10','160','6','10.2','11','0.41666666666667','10','0.41666666666667','10','UNDICESIMO'),('12','vfs','49','0.70833333333333','17','145','0','16.5','4','0.70833333333333','17','0.083333333333333','2','DODICESIMO'),('13','giallo','49','0.125','3','118','18','5','17','0.125','3','0.54166666666667','13','TREDICESIMO'),('14','calto','53','0.16666666666667','4','117','20','5','17','0.16666666666667','4','0.58333333333333','14','QUATTORDICESIMO'),('15','cane','56','0.20833333333333','5','116','10','6','16','0.20833333333333','5','0.625','15','QUINDICESIMO'),('16','gregf','64','0.45833333333333','11','55','0','11.6','10','0.45833333333333','11','0.66666666666667','16','SEDICESIMO'),('17','dsafg','67','0.5','12','50','0','12.3','9','0.5','12','0.70833333333333','17','DICIASETTESIMO'),('18','dsfgveds','70','0.54166666666667','13','45','0','13','8','0.54166666666667','13','0.75','18','DICIOTTESIMO'),('19','sfgvs','73','0.58333333333333','14','40','0','13.7','7','0.58333333333333','14','0.79166666666667','19','DICIANNOVESIMO'),('20','fgads','76','0.625','15','35','0','14.4','6','0.625','15','0.83333333333333','20','VENTESIMO'), 
+ 
+ 10:15:54 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'MMOpen' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE MMOpen 
+ 
+ 10:19:01 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'MMExperience' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE MMExperience 
+ 
+ 10:26:37 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Seleziona' non è valido.
+ SELECT * FROM Seleziona Categoria 
+ 
+ 10:56:38 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ SELECT * FROM Open 
+ 
+ 10:56:49 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'Categoria'.
+ DROP TABLE Seleziona Categoria 
+ 
+ 10:56:49 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'Categoria'.
+ CREATE TABLE Seleziona Categoria (
+            Posizione INT NULL,
+            Team NVARCHAR(MAX) NULL,
+            [Totale Punti] INT NULL,
+            [Score 1] NVARCHAR(50) NULL,
+            [Posizione Prova 1] INT NULL,
+            [Score 2] NVARCHAR(50) NULL,
+            [Posizione Prova 2] INT NULL,
+            [Score 3] NVARCHAR(50) NULL,
+            [Posizione Prova 3] INT NULL,
+            [Score 4] NVARCHAR(50) NULL,
+            [Posizione Prova 4] INT NULL,
+            [Score 5] NVARCHAR(50) NULL,
+            [Posizione Prova 5] INT NULL,
+            [Componenti] NVARCHAR(MAX) NULL,
+            )  
+ 
+ 10:58:26 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ DROP TABLE Open 
+ 
+ 10:58:26 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ CREATE TABLE Open (
+            Posizione INT NULL,
+            Team NVARCHAR(MAX) NULL,
+            [Totale Punti] INT NULL,
+            [Score 1] NVARCHAR(50) NULL,
+            [Posizione Prova 1] INT NULL,
+            [Score 2] NVARCHAR(50) NULL,
+            [Posizione Prova 2] INT NULL,
+            [Score 3] NVARCHAR(50) NULL,
+            [Posizione Prova 3] INT NULL,
+            [Score 4] NVARCHAR(50) NULL,
+            [Posizione Prova 4] INT NULL,
+            [Score 5] NVARCHAR(50) NULL,
+            [Posizione Prova 5] INT NULL,
+            [Componenti] NVARCHAR(MAX) NULL,
+            )  
+ 
+ 10:59:51 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ INSERT INTO Open ([Posizione],[Team],[Totale Punti],[Score 1],[Posizione Prova 1],[Score 2],[Posizione Prova 2],[Score 3],[Posizione Prova 3],[Score 4],[Posizione Prova 4],[Score 5],[Posizione Prova 5],[Componenti]) VALUES ('1','CIAO432','35','0.25','6','200','2','7.4','15','0.25','6','0.25','6','PRIMO'),('2','ciao2','39','0.29166666666667','7','190','5','8.1','14','0.29166666666667','7','0.29166666666667','7','SECONDO'),('3','c4','42','0.33333333333333','8','180','8','8.8','13','0.33333333333333','8','0.33333333333333','8','TERZO'),('4','blu','42','0.041666666666667','1','120','14','3','19','0.041666666666667','1','0.45833333333333','11','QUARTO'),('5','ciao3','45','0.375','9','170','17','9.5','12','0.375','9','0.375','9','QUINTO'),('6','asfvs','47','0.79166666666667','19','195','0','17.9','2','0.79166666666667','19','0.16666666666667','4','SESTO'),('7','fvdsa','47','0.83333333333333','20','220','0','18.6','1','0.83333333333333','20','0.20833333333333','5','SETTIMO'),('8','verde','47','0.083333333333333','2','119','5','0.1875','19','0.083333333333333','2','0.5','12','OTTAVO'),('9','blu2','48','0.66666666666667','16','120','0','15.8','5','0.66666666666667','16','0.041666666666667','1','NONO'),('10','asfv','48','0.75','18','170','0','17.2','3','0.75','18','0.125','3','DECIMO'),('11','c5','49','0.41666666666667','10','160','6','10.2','11','0.41666666666667','10','0.41666666666667','10','UNDICESIMO'),('12','vfs','49','0.70833333333333','17','145','0','16.5','4','0.70833333333333','17','0.083333333333333','2','DODICESIMO'),('13','giallo','49','0.125','3','118','18','5','17','0.125','3','0.54166666666667','13','TREDICESIMO'),('14','calto','53','0.16666666666667','4','117','20','5','17','0.16666666666667','4','0.58333333333333','14','QUATTORDICESIMO'),('15','cane','56','0.20833333333333','5','116','10','6','16','0.20833333333333','5','0.625','15','QUINDICESIMO'),('16','gregf','64','0.45833333333333','11','55','0','11.6','10','0.45833333333333','11','0.66666666666667','16','SEDICESIMO'),('17','dsafg','67','0.5','12','50','0','12.3','9','0.5','12','0.70833333333333','17','DICIASETTESIMO'),('18','dsfgveds','70','0.54166666666667','13','45','0','13','8','0.54166666666667','13','0.75','18','DICIOTTESIMO'),('19','sfgvs','73','0.58333333333333','14','40','0','13.7','7','0.58333333333333','14','0.79166666666667','19','DICIANNOVESIMO'),('20','fgads','76','0.625','15','35','0','14.4','6','0.625','15','0.83333333333333','20','VENTESIMO') 
+ 
+ 11:00:25 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ SELECT * FROM Open 
+ 
+ 11:00:29 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'Open'.
+ SELECT * FROM Open 
+ 
+ 11:13:38 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT * FROM [Experience] 
+ 

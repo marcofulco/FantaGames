@@ -1,0 +1,50 @@
+<html lang="it">
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, width=device-width, height=device-height, viewport-fit=cover">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https: http: 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * https://*.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *; img-src * 'self' data: https: http: content:;">
+		<meta name="description" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<meta name="application-name" content="" />
+		<meta name="msapplication-TileColor" content="#4B7A46">
+		<meta name="theme-color" content="#4B7A46"/>
+		<title>Fogli di carico</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/xlsx.full.min.js"></script>
+        <script src="js/clsReadFile.js"></script>
+        <link href="css/tabulator.min.css" rel="stylesheet">
+        <script type="text/javascript" src="js/tabulator.min.js"></script>
+	</head>
+	<body class="">
+        <div class="container-fluid">
+            <div class="row" id="header">
+                <div class="col-12">
+                    <h1>Carica file</h1>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="file">Upload</label>
+                        <input type="file" class="form-control" id="file">
+                        <select class="form-select" id="categoria">
+                            <option selected>Seleziona Categoria</option>
+                            <option value="MMOpen">M/M - Open</option>
+                            <option value="WWOpen">W/W - Open</option>
+                            <option value="MWOpen">M/W - Open</option>
+                            <option value="MMExperience">M/M - Experience</option>
+                            <option value="WWExperience">W/W - Experience</option>
+                            <option value="MWExperience">M/W - Experience</option>
+                        </select>
+                        <button class="btn btn-outline-primary" type="button">Carica</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 overflow-y-auto" id="contenitoreTabella">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
