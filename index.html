@@ -1,64 +1,128 @@
 <html lang="it">
 	<head>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, width=device-width, height=device-height, viewport-fit=cover">
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https: http: 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * https://*.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *; img-src * 'self' data: https: http: content:;">
-		<meta name="description" content="">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<meta
+			name="viewport"
+			content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, width=device-width, height=device-height, viewport-fit=cover"
+		/>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self' data: gap: https://ssl.gstatic.com https: http: 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * https://*.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *; img-src * 'self' data: https: http: content:;"
+		/>
+		<meta name="description" content="" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<meta name="application-name" content="" />
-		<meta name="msapplication-TileColor" content="#4B7A46">
-		<meta name="theme-color" content="#4B7A46"/>
+		<meta name="msapplication-TileColor" content="#4B7A46" />
+		<meta name="theme-color" content="#4B7A46" />
 		<title>Challenge CF91011</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/xlsx.full.min.js"></script>
-        <script src="js/clsReadFile.js"></script>
-        <link href="css/tabulator.min.css" rel="stylesheet">
-        <script type="text/javascript" src="js/tabulator.min.js"></script>
-        <link href="css/tabulator_bootstrap5.min.css" rel="stylesheet">
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/xlsx.full.min.js"></script>
+		<script src="js/clsReadFile.js"></script>
+		<link href="css/tabulator.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/tabulator.min.js"></script>
+		<link href="css/tabulator_bootstrap5.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
 	</head>
 	<body class="">
-        <div class="container-fluid">
-            <div class="row" id="headerCaricaFile" style="display: none;">
-                <div class="col-12">
-                    <h1>Carica file</h1>
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="file">Upload</label>
-                        <input type="file" class="form-control" id="file">
-                        <select class="form-select" id="categoria">
-                            <option selected value="">Seleziona Categoria</option>
-                            <option value="Open">Open</option>
-                            <option value="Experience">Experience</option>
-                        </select>
-                        <button class="btn btn-outline-primary" type="button" id="caricaDati">Carica</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="header" style="display: none;">
-                <div class="col-12">
-                    <h1>Risultati Challenge</h1>
-                </div>
-                <div class="col-12">
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="campoCerca">Team</label>
-                        <input type="text" class="form-control" id="campoCerca">
-                        <button class="btn btn-outline-warning" type="button" id="pulisciCampoCerca">X</button>
-                        <select class="form-select" id="categoriaTabella">
-                            <option value="Open">Open</option>
-                            <option value="Experience">Experience</option>
-                        </select>
-                        <button class="btn btn-outline-primary" type="button" id="btnLeggiDati">Cerca</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 overflow-y-auto" id="contenitoreTabella">
+		<div class="container-fluid">
+			<div class="row" id="headerCaricaFile" style="display: none">
+				<div class="col-12">
+					<h1>Carica file</h1>
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="file"
+							>Upload</label
+						>
+						<input type="file" class="form-control" id="file" />
+						<select class="form-select" id="categoria">
+							<option selected value="">
+								Seleziona Categoria
+							</option>
+							<option value="Open">Open</option>
+							<option value="Experience">Experience</option>
+						</select>
+						<button
+							class="btn btn-outline-primary"
+							type="button"
+							id="caricaDati"
+						>
+							Carica
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="divFiltri" id="header" style="display: none">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h1>Risultati Challenge</h1>
+					</div>
+					<div class="col-12">
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="campoCerca"
+								>Categoria</label
+							>
+							<select class="form-select" id="categoriaTabella">
+								<option value="Open">Open</option>
+								<option value="Experience">Experience</option>
+							</select>
+							<button
+								class="btn btn-outline-primary btnLeggiDati"
+								type="button"
+								id=""
+							>
+								Cerca
+							</button>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="campoCerca"
+								>Classifica</label
+							>
+							<select class="form-select" id="classifica">
+								<option value="Overall">Overall</option>
+								<option value="Wod1">Wod 1</option>
+								<option value="Wod2">Wod 2</option>
+								<option value="Wod3">Wod 3</option>
+								<option value="Wod4">Wod 4</option>
+								<option value="Wod5">Wod 5</option>
+							</select>
+							<button
+								class="btn btn-outline-primary btnLeggiDati" 
+								type="button"
+								id=""
+							>
+								Cerca
+							</button>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="campoCerca"
+								>Team</label
+							>
+							<input
+								type="text"
+								class="form-control"
+								id="campoCerca"
+							/>
+							<button
+								class="btn btn-outline-secondary"
+								type="button"
+								id="pulisciCampoCerca"
+							>
+								X
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="divFiltri overflow-x-auto overflow-y-auto" id="contenitoreTabella" style="display: none">
 
-                </div>
-            </div>
-        </div>
-    </body>
+			</div>
+		</div>
+	</body>
 </html>

@@ -17,9 +17,16 @@ window.addEventListener('load', function () {
         };
         reader.readAsArrayBuffer(file.files[0]);
     });
-    document.getElementById('caricaDati').addEventListener('click', function () {
-        if(document.getElementById('categoria').value==''){
-            alert('Inserire una categoria');
+    document.querySelector('#caricaDati').addEventListener('click', function () {
+        
+        if (document.getElementById('categoria').value == '') {
+            // alert('Inserire una categoria');
+            attivaAlert('Inserire una categoria', 'Errore', '', '');
+            return;
+        }
+        if (dataTabella.length == 0) {
+            // alert('Caricare un file');
+            attivaAlert('Caricare un file', 'Errore', '', '');
             return;
         }
         let jSonRichiesta = {
@@ -39,50 +46,52 @@ window.addEventListener('load', function () {
         }
     }
     document.getElementById('header').style.display = 'block';
-    document.getElementById("campoCerca").addEventListener("keyup", function() {
+    document.getElementById("campoCerca").addEventListener("keyup", function () {
         let valore = this.value.toLowerCase();
-        let dati=table.getRows();
-        for(var i=0;i<dati.length;i++){
-            let riga=dati[i];
-            let data=riga.getData();
-            let trovato=false;
-            for(var [k,v] of Object.entries(data)){
-                if(v.toString().toLowerCase().indexOf(valore)>=0){
-                    trovato=true;
+        let dati = document.getElementById('contenitoreTabella').querySelectorAll('tr');
+        for (var i = 0; i < dati.length; i++) {
+            let riga = dati[i].querySelectorAll('td');
+            let trovato = false;
+            for (var j = 0; j < riga.length; j++) {
+                let cella = riga[j];
+                if (cella.innerHTML.toLowerCase().indexOf(valore) >= 0) {
+                    trovato = true;
                     break;
                 }
             }
-            if(trovato){
-                riga.getElement().style.display = "";
-            }else{
-                riga.getElement().style.display = "none";
+            if (trovato) {
+                dati[i].style.display = "";
+            } else {
+                dati[i].style.display = "none";
             }
 
         }
     });
-    document.getElementById('btnLeggiDati').addEventListener('click', function () {
+    document.querySelectorAll('.btnLeggiDati').forEach((element) => element.addEventListener('click', function () {
         let jSonRichiesta = {
             "azione": "leggiDati",
             "categoria": document.getElementById('categoriaTabella').value,
+            "classifica": document.getElementById('classifica').value,
         }
-        call(jSonRichiesta,(data)=>{
-            if(data.esito==true && data.error==''){
+        call(jSonRichiesta, (data) => {
+            if (data.esito == true && data.error == '') {
                 scopattaTabella(data.dati);
-            }else{
-                alert(data.error);
+
+            } else {
+                attivaAlert(data.error, 'Errore', '', '');
             }
-            
+
         });
-    })
-    this.document.getElementById('pulisciCampoCerca').addEventListener('click',function(){
-        document.getElementById('campoCerca').value='';
-        let dati=table.getRows();
-        for(var i=0;i<dati.length;i++){
-            dati[i].getElement().style.display = "";
+    }));
+    this.document.getElementById('pulisciCampoCerca').addEventListener('click', function () {
+        document.getElementById('campoCerca').value = '';
+        let dati = document.getElementById('contenitoreTabella').querySelectorAll('tr');
+        for (var i = 0; i < dati.length; i++) {
+            dati[i].style.display = "";
         }
     })
 });
-const call = (jSonRichiesta,callBack='') => {
+const call = (jSonRichiesta, callBack = '') => {
     jSonRichiesta = JSON.stringify(jSonRichiesta);
     fetch("php/request.php", {
         method: 'post',
@@ -97,7 +106,7 @@ const call = (jSonRichiesta,callBack='') => {
             phpRes = JSON.parse(phpRes);
             // let jSonRes = JSON.parse(phpRes);
             // console.log(jSonRes);
-            if(callBack!=''){
+            if (callBack != '') {
                 callBack(phpRes);
             }
         })
@@ -105,106 +114,149 @@ const call = (jSonRichiesta,callBack='') => {
             console.error('Errore:', error);
         });
 }
-var italianLocale = {
-    "groups": {
-        "item": "elemento",
-        "items": "elementi",
-    },
-    "pagination": {
-        "first": "Primo",
-        "first_title": "Prima Pagina",
-        "last": "Ultimo",
-        "last_title": "Ultima Pagina",
-        "prev": "Precedente",
-        "prev_title": "Pagina Precedente",
-        "next": "Successivo",
-        "next_title": "Pagina Successiva",
-        "counter": {
-            "showing": "Mostra",
-            "of": "di",
-            "rows": "righe",
-            "pages": "pagine",
-        }
-    },
-    "headerFilters": {
-        "default": "filtra", //default header filter placeholder text
-        "columns": {
-            "name": "filtra nome...", //replace default header filter text for column name
-        }
-    },
-    // Altre traduzioni...
-};
 
-
-// const scopattaTabella=(tabellaTmp)=>{
-//     let tabella=document.getElementById('contenitoreTabella');
-//     tabella.innerHTML='';
-//     let tabellaObj=document.createElement('table');
-//     tabellaObj.className='table table-striped';
-//     let thead=document.createElement('thead');
-//     let tr=document.createElement('tr');
-
-//     for(var [k,v] of Object.entries(tabellaTmp)){
-//         for(var [k1,v1] of Object.entries(v)){
-//             let th=document.createElement('th');
-//             th.innerHTML=k1;
-//             tr.appendChild(th);
-//         }
-//         break;
-//     }
-//     thead.appendChild(tr);
-//     tabellaObj.appendChild(thead);
-//     let tbody=document.createElement('tbody');
-//     for(var [k,v] of Object.entries(tabellaTmp)){
-//         let tr=document.createElement('tr');
-//         for(var [k1,v1] of Object.entries(v)){
-//             let td=document.createElement('td');
-//             td.innerHTML=v1;
-//             tr.appendChild(td);
-//         }
-//         tbody.appendChild(tr);
-//     }
-//     tabellaObj.appendChild(tbody);
-//     tabella.appendChild(tabellaObj);
-//     tabella.style.height=document.documentElement.clientHeight- (document.getElementById('header').clientHeight+50)+''+'px';
-//     dataTabella=tabellaTmp;
-// }
 const scopattaTabella = (tabellaTmp) => {
-    let columns = [];
-    let listaColonne=['Posizione','Team','Score 1','Score 2','Score 3','Score 4','Score 5','Componenti',]
+    let tabella = document.getElementById('contenitoreTabella');
+    tabella.style.display = 'block';
+    tabella.innerHTML = '';
+    let tabellaObj = document.createElement('table');
+    tabellaObj.className = 'table table-striped';
+    let thead = document.createElement('thead');
+    let tr = document.createElement('tr');
+
     for (var [k, v] of Object.entries(tabellaTmp)) {
         for (var [k1, v1] of Object.entries(v)) {
-            if(listaColonne.indexOf(k1)>=0){
-                columns.push({ title: k1, field: k1 });
-            }
+            let th = document.createElement('th');
+            th.innerHTML = k1;
+            tr.appendChild(th);
         }
         break;
     }
+    thead.appendChild(tr);
+    tabellaObj.appendChild(thead);
+    let tbody = document.createElement('tbody');
+    cont = 0;
+    for (var [k, v] of Object.entries(tabellaTmp)) {
+        cont++;
+        let tr = document.createElement('tr');
 
-    table = new Tabulator("#contenitoreTabella", {
-        data: tabellaTmp,
-        columns: columns,
-        layout: "fitDataTable",
-        // responsiveLayout: "collapse",
-        // persistence : true, 
-        tooltips: true,
-        addRowPos: "top",
-        history: true,
-        pagination: "local",
-        paginationSize: 100,
-        movableColumns: true,
-        resizableRows: false,
-        height: document.documentElement.clientHeight - (document.getElementById('header').clientHeight + document.getElementById('headerCaricaFile').clientHeight +20) + '' + 'px',
-        pagination: false,
-        paginationCounter: "rows",
-        locale: "it", // Imposta la localizzazione italiana come default
-        langs: {
-            "it": italianLocale, // Imposta le traduzioni italiane
-        },
-        selectableRows: 1,
-        footerElement: null
-        // Configurazioni aggiuntive per bottoni di esportazione ecc.
-    });
+
+        for (var [k1, v1] of Object.entries(v)) {
+            let td = document.createElement('td');
+
+            if (cont == 1) {
+                td.className = 'gold';
+            } else if (cont == 2) {
+                td.className = 'silver';
+            } else if (cont == 3) {
+                td.className = 'bronze';
+            }
+            td.innerHTML = v1;
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+    tabellaObj.appendChild(tbody);
+    tabella.appendChild(tabellaObj);
+    // tabella.style.height=document.documentElement.clientHeight- (document.getElementById('header').clientHeight+50)+''+'px';
     dataTabella = tabellaTmp;
 }
+function generaUUID() {
+    try {
+        const array = new Uint8Array(8);
+        crypto.getRandomValues(array);
+        let hexID = Array.from(array, byte => byte.toString(16).padStart(2, "0")).join("");
+        var str = Date.now() + '' + hexID.toUpperCase();
+        return 'UID' + str;
+    } catch (e) {
+
+        return 'UID' + Date.now() + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+    }
+
+
+}
+let attivaAlert = (messaggio, titolo, callbackConferma, callBackClose) => {
+    let guid = generaUUID();
+    let modal = `
+    <div class="modal fade" id="${guid}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${titolo}">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="${titolo}">${titolo}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ${messaggio}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-primary" id="conferma-${guid}">Conferma</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+    // Rimuove un eventuale modal precedente con lo stesso ID
+    let modalEsistente = document.getElementById(guid);
+    if (modalEsistente) {
+        modalEsistente.remove();
+    }
+
+    // Aggiunge il modal al body
+    document.body.insertAdjacentHTML("beforeend", modal);
+
+    let modalObj = new bootstrap.Modal(document.getElementById(guid));
+    modalObj.show();
+
+    document.querySelector(`#conferma-${guid}`).addEventListener('click', function () {
+        if (callbackConferma) {
+            callbackConferma();
+        }
+        modalObj.hide();
+    });
+
+    // Rimuove completamente il modal dal DOM dopo la chiusura
+    document.getElementById(guid).addEventListener('hidden.bs.modal', function () {
+        document.getElementById(guid).remove();
+    });
+};
+
+// const scopattaTabella = (tabellaTmp) => {
+//     let columns = [];
+//     let listaColonne=['Posizione','Team','Score 1','Score 2','Score 3','Score 4','Score 5','Componenti',]
+//     for (var [k, v] of Object.entries(tabellaTmp)) {
+//         for (var [k1, v1] of Object.entries(v)) {
+//             if(listaColonne.indexOf(k1)>=0){
+//                 columns.push({ title: k1, field: k1 });
+//             }
+//         }
+//         break;
+//     }
+
+//     table = new Tabulator("#contenitoreTabella", {
+//         data: tabellaTmp,
+//         columns: columns,
+//         layout: "fitDataTable",
+//         // responsiveLayout: "collapse",
+//         // persistence : true,
+//         tooltips: true,
+//         addRowPos: "top",
+//         history: true,
+//         pagination: "local",
+//         paginationSize: 100,
+//         movableColumns: true,
+//         resizableRows: false,
+//         height: document.documentElement.clientHeight - (document.getElementById('header').clientHeight + document.getElementById('headerCaricaFile').clientHeight +20) + '' + 'px',
+//         pagination: false,
+//         paginationCounter: "rows",
+//         locale: "it", // Imposta la localizzazione italiana come default
+//         langs: {
+//             "it": italianLocale, // Imposta le traduzioni italiane
+//         },
+//         selectableRows: 1,
+//         footerElement: null
+//         // Configurazioni aggiuntive per bottoni di esportazione ecc.
+//     });
+//     dataTabella = tabellaTmp;
+// }
 

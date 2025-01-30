@@ -82,3 +82,87 @@
  11:13:38 29/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\cf91011\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
  SELECT * FROM [Experience] 
  
+ 22:21:28 30/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'FROM'.
+ SELECT Team, FROM [Open] order by  
+ 
+ 22:21:58 30/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'by'.
+ SELECT Team,Posizione,Componenti FROM [Open] order by  
+ 
+ 22:40:31 30/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT Team,Componenti,Posizione,[Totale Punti] FROM [Experience] order by Posizione,[Totale Punti] 
+ 
+ 22:40:48 30/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT Team,Componenti,Posizione,[Totale Punti] FROM [Experience] order by Posizione,[Totale Punti] 
+ 
+ 23:40:09 30/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Experience' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Experience] 
+ 
+ 00:00:46 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ DROP TABLE [] 
+ 
+ 00:00:46 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ CREATE TABLE [] (
+            Posizione INT NULL,
+            Team NVARCHAR(MAX) NULL,
+            [Totale Punti] INT NULL,
+            [Score 1] NVARCHAR(50) NULL,
+            [Posizione Prova 1] INT NULL,
+            [Score 2] NVARCHAR(50) NULL,
+            [Posizione Prova 2] INT NULL,
+            [Score 3] NVARCHAR(50) NULL,
+            [Posizione Prova 3] INT NULL,
+            [Score 4] NVARCHAR(50) NULL,
+            [Posizione Prova 4] INT NULL,
+            [Score 5] NVARCHAR(50) NULL,
+            [Posizione Prova 5] INT NULL,
+            [Componenti] NVARCHAR(MAX) NULL,
+            )  
+ 
+ 00:00:48 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ DROP TABLE [] 
+ 
+ 00:00:48 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ CREATE TABLE [] (
+            Posizione INT NULL,
+            Team NVARCHAR(MAX) NULL,
+            [Totale Punti] INT NULL,
+            [Score 1] NVARCHAR(50) NULL,
+            [Posizione Prova 1] INT NULL,
+            [Score 2] NVARCHAR(50) NULL,
+            [Posizione Prova 2] INT NULL,
+            [Score 3] NVARCHAR(50) NULL,
+            [Posizione Prova 3] INT NULL,
+            [Score 4] NVARCHAR(50) NULL,
+            [Posizione Prova 4] INT NULL,
+            [Score 5] NVARCHAR(50) NULL,
+            [Posizione Prova 5] INT NULL,
+            [Componenti] NVARCHAR(MAX) NULL,
+            )  
+ 
+ 00:00:49 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ DROP TABLE [] 
+ 
+ 00:00:49 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di un oggetto o una colonna manca o è vuoto. Per le istruzioni SELECT INTO verificare che ogni colonna abbia un nome. Per le altre istruzioni, cercare eventuali nomi alias vuoti. Gli alias definiti come "" o [] non sono consentiti. Modificare l'alias in un nome valido.
+ CREATE TABLE [] (
+            Posizione INT NULL,
+            Team NVARCHAR(MAX) NULL,
+            [Totale Punti] INT NULL,
+            [Score 1] NVARCHAR(50) NULL,
+            [Posizione Prova 1] INT NULL,
+            [Score 2] NVARCHAR(50) NULL,
+            [Posizione Prova 2] INT NULL,
+            [Score 3] NVARCHAR(50) NULL,
+            [Posizione Prova 3] INT NULL,
+            [Score 4] NVARCHAR(50) NULL,
+            [Posizione Prova 4] INT NULL,
+            [Score 5] NVARCHAR(50) NULL,
+            [Posizione Prova 5] INT NULL,
+            [Componenti] NVARCHAR(MAX) NULL,
+            )  
+ 
+ 00:05:35 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'VALUES'.
+ INSERT INTO [Open] () VALUES  
+ 
+ 00:06:00 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'VALUES'.
+ INSERT INTO [Open] () VALUES  
+ 

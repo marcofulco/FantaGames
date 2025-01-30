@@ -9,14 +9,14 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "https://smart.aziendapratica.it:4443/cf91011/index.html",
+            "url": "https://smart.aziendapratica.it:4443/FantaGames/index.html",
             "webRoot": "${workspaceFolder}"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Avvia Chrome con localhost",
-            "file": "d:\\xampp\\htdocs\\cf91011\\index.html"
+            "file": "d:\\xampp\\htdocs\\FantaGames\\index.html"
         }
     ]
 }

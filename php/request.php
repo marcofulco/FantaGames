@@ -28,7 +28,8 @@ if(isset($_POST['jSonRichiesta'])==false)
         case 'leggiDati':
             require_once('leggiDati.php');
             $leggiDati=new leggiDati();
-            $res=$leggiDati->leggi($categoria);
+            $classifica=$request->classifica;
+            $res=$leggiDati->leggi($categoria,$classifica);
             break;
     }
     echo elaboraRisposta($res);

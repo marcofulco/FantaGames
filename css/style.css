@@ -1,0 +1,30 @@
+body{
+    
+    background-image: url('../img/cf91011.jpg'); /* Sostituisci con il percorso corretto */
+    background-position: center center; /* Posiziona l'immagine in alto e centrata orizzontalmente */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+    background-size: 100% auto; /* Imposta la larghezza al 100% e l'altezza automatica */
+    background-attachment: fixed; /* Mantiene lo sfondo fisso mentre i contenuti scorrono */
+    /* height: 100vh; Altezza del body pari all'altezza della viewport */
+    margin: 0;
+    padding: 0;
+}
+.divFiltri{
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+#contenitoreTabella{
+    margin-top: 40px!important;
+}
+.gold{
+    background-color: gold!important;
+}
+.silver{
+    background-color: silver!important;
+}
+.bronze{
+    background-color: #cd7f32!important;
+}
