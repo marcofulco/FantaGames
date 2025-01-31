@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
             var worksheet = workbook.Sheets[firstSheetName];
             var data = XLSX.utils.sheet_to_json(worksheet);
             // tabellaTmp=data;
-            console.log(data);
+            // console.log(data);
             scopattaTabella(data);
         };
         reader.readAsArrayBuffer(file.files[0]);
@@ -21,12 +21,12 @@ window.addEventListener('load', function () {
         
         if (document.getElementById('categoria').value == '') {
             // alert('Inserire una categoria');
-            attivaAlert('Inserire una categoria', 'Errore', '', '');
+            attivaAlert('Inserire una categoria!'.toUpperCase(), 'Attenzione', '', '');
             return;
         }
         if (dataTabella.length == 0) {
             // alert('Caricare un file');
-            attivaAlert('Caricare un file', 'Errore', '', '');
+            attivaAlert('Caricare un file valido!'.toUpperCase(), 'Attenzione', '', '');
             return;
         }
         let jSonRichiesta = {
@@ -175,7 +175,7 @@ function generaUUID() {
 
 
 }
-let attivaAlert = (messaggio, titolo, callbackConferma, callBackClose) => {
+let attivaAlert = (messaggio, titolo, callbackConferma, callBackChiudi) => {
     let guid = generaUUID();
     let modal = `
     <div class="modal fade" id="${guid}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${titolo}">
@@ -189,7 +189,7 @@ let attivaAlert = (messaggio, titolo, callbackConferma, callBackClose) => {
             ${messaggio}
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="chiudi-${guid}">Chiudi</button>
             <button type="button" class="btn btn-primary" id="conferma-${guid}">Conferma</button>
           </div>
         </div>
@@ -214,7 +214,12 @@ let attivaAlert = (messaggio, titolo, callbackConferma, callBackClose) => {
         }
         modalObj.hide();
     });
-
+    document.querySelector(`#chiudi-${guid}`).addEventListener('click', function () {
+        if (callBackChiudi) {
+            callBackChiudi();
+        }
+        modalObj.hide();
+    });
     // Rimuove completamente il modal dal DOM dopo la chiusura
     document.getElementById(guid).addEventListener('hidden.bs.modal', function () {
         document.getElementById(guid).remove();
