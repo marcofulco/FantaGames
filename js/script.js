@@ -20,12 +20,12 @@ window.addEventListener('load', function () {
     document.querySelector('#caricaDati').addEventListener('click', function () {
         
         if (document.getElementById('categoria').value == '') {
-            // alert('Inserire una categoria');
+            
             attivaAlert('Inserire una categoria!'.toUpperCase(), 'Attenzione', '', '');
             return;
         }
         if (dataTabella.length == 0) {
-            // alert('Caricare un file');
+            
             attivaAlert('Caricare un file valido!'.toUpperCase(), 'Attenzione', '', '');
             return;
         }
@@ -48,7 +48,13 @@ window.addEventListener('load', function () {
     document.getElementById('header').style.display = 'block';
     document.getElementById("campoCerca").addEventListener("keyup", function () {
         let valore = this.value.toLowerCase();
-        let dati = document.getElementById('contenitoreTabella').querySelectorAll('tr');
+        if(valore==''){
+            let dati = document.getElementById('contenitoreTabella').querySelectorAll('table tbody tr');
+            for (var i = 0; i < dati.length; i++) {
+                dati[i].style.display = "";
+            }
+        }
+        let dati = document.getElementById('contenitoreTabella').querySelectorAll('table tbody tr');
         for (var i = 0; i < dati.length; i++) {
             let riga = dati[i].querySelectorAll('td');
             let trovato = false;
@@ -88,7 +94,7 @@ window.addEventListener('load', function () {
     }));
     this.document.getElementById('pulisciCampoCerca').addEventListener('click', function () {
         document.getElementById('campoCerca').value = '';
-        let dati = document.getElementById('contenitoreTabella').querySelectorAll('tr');
+        let dati = ddocument.getElementById('contenitoreTabella').querySelectorAll('table tbody tr')
         for (var i = 0; i < dati.length; i++) {
             dati[i].style.display = "";
         }
