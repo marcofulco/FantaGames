@@ -68,6 +68,7 @@ window.addEventListener('load', function () {
         }
     });
     document.querySelectorAll('.btnLeggiDati').forEach((element) => element.addEventListener('click', function () {
+
         let jSonRichiesta = {
             "azione": "leggiDati",
             "categoria": document.getElementById('categoriaTabella').value,
@@ -78,6 +79,8 @@ window.addEventListener('load', function () {
                 scopattaTabella(data.dati);
 
             } else {
+                let tabella = document.getElementById('contenitoreTabella');
+                tabella.style.display = 'none';
                 attivaAlert(data.error, 'Errore', '', '');
             }
 

@@ -166,3 +166,12 @@
  00:06:00 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di 'VALUES'.
  INSERT INTO [Open] () VALUES  
  
+ 08:25:55 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 5],[Score 5] FROM [Experience] order by [Posizione Prova 5],[Score 5] 
+ 
+ 08:26:41 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,Posizione,[Totale Punti] FROM [Experience] order by Posizione,[Totale Punti] 
+ 
+ 08:26:46 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 5],[Score 5] FROM [Experience] order by [Posizione Prova 5],[Score 5] 
+ 
