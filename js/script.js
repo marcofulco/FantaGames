@@ -1,5 +1,6 @@
 let dataTabella = [];
 let table;
+let workbook;
 window.addEventListener('load', function () {
     var file = document.getElementById('file');
     var output = document.getElementById('output');
@@ -7,8 +8,9 @@ window.addEventListener('load', function () {
         var reader = new FileReader();
         reader.onload = (event) => {
             var data = new Uint8Array(event.target.result);
-            var workbook = XLSX.read(data, { type: 'array' });
-            var firstSheetName = workbook.SheetNames[1];
+            workbook = XLSX.read(data, { type: 'array' });
+            // var firstSheetName = workbook.SheetNames[1];
+            let firstSheetName='Leaderbord '+document.getElementById('categoria').value 
             var worksheet = workbook.Sheets[firstSheetName];
             var data = XLSX.utils.sheet_to_json(worksheet);
             // tabellaTmp=data;
@@ -34,7 +36,16 @@ window.addEventListener('load', function () {
             "dati": dataTabella,
             "categoria": document.getElementById('categoria').value,
         }
-        call(jSonRichiesta);
+        call(jSonRichiesta,(res)=>{
+            if(res.error==''){
+                attivaAlert('Dati caricati correttamente!'.toUpperCase(), 'Successo', '', '');
+            }
+            //pulisco la tabella e nascondo il contenitore
+            document.getElementById('contenitoreTabella').innerHTML='';
+            document.getElementById('contenitoreTabella').style.display='none';
+            //pulisco il campo file
+            document.getElementById('file').value='';
+        });
     })
     var c = location.href.split("?");
     if (c.length >= 1) {
@@ -152,15 +163,19 @@ const scopattaTabella = (tabellaTmp) => {
 
         for (var [k1, v1] of Object.entries(v)) {
             let td = document.createElement('td');
-
+            // td.classList.add('text-center');
             if (cont == 1) {
-                td.className = 'gold';
+                td.classList.add('gold');
             } else if (cont == 2) {
-                td.className = 'silver';
+                td.classList.add('silver');
             } else if (cont == 3) {
-                td.className = 'bronze';
+                td.classList.add('bronze');
             }
-            td.innerHTML = v1;
+            try{
+                td.innerHTML = formattaNumeri(Number(v1),2,0)!='' ? formattaNumeri(Number(v1),2,0) : v1;
+            }catch(e){
+                td.innerHTML = v1;
+            }
             tr.appendChild(td);
         }
         tbody.appendChild(tr);
@@ -274,3 +289,15 @@ let attivaAlert = (messaggio, titolo, callbackConferma, callBackChiudi) => {
 //     dataTabella = tabellaTmp;
 // }
 
+function formattaNumeri(valore, decimaliMax, decimaliMin) {
+    if (isNaN(valore)) {
+        return "";
+    }
+
+    var formatta = new Intl.NumberFormat("it-IT", {
+        minimumFractionDigits: decimaliMin,
+        maximumFractionDigits: decimaliMax
+    });
+
+    return formatta.format(valore);
+}

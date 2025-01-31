@@ -175,3 +175,39 @@
  08:26:46 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Il nome di oggetto 'Experience' non è valido.
  SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 5],[Score 5] FROM [Experience] order by [Posizione Prova 5],[Score 5] 
  
+ 12:22:26 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Experience' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Experience] 
+ 
+ 12:24:12 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Experience' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Experience] 
+ 
+ 12:42:54 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'as'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] FROM [Open] order by [Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] 
+ 
+ 12:42:56 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'as'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] FROM [Open] order by [Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] 
+ 
+ 12:43:01 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'as'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 2],convert(numeric(18,2),[Score 2]) as [Score 2] FROM [Open] order by [Posizione Prova 2],convert(numeric(18,2),[Score 2]) as [Score 2] 
+ 
+ 12:43:03 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'as'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 2],convert(numeric(18,2),[Score 2]) as [Score 2] FROM [Experience] order by [Posizione Prova 2],convert(numeric(18,2),[Score 2]) as [Score 2] 
+ 
+ 12:48:44 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'FROM'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team, FROM [Open] order by Posizione,[Totale Punti] 
+ 
+ 12:48:46 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'FROM'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team, FROM [Open] order by Posizione,[Totale Punti] 
+ 
+ 12:49:33 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità della parola chiave 'FROM'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1], FROM [Open] order by [Posizione Prova 1],convert(numeric(18,2) 
+ 
+ 12:49:55 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di ')'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] FROM [Open] order by [Posizione Prova 1],convert(numeric(18,2) 
+ 
+ 12:50:32 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di ')'.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 1],convert(numeric(18,2),[Score 1]) as [Score 1] FROM [Open] order by [Posizione Prova 1],convert(numeric(18,2)) 
+ 
+ 16:28:20 31/01/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42000: SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintassi non corretta in prossimità di ','.
+ SELECT concat('<div class="fw-bold">',Team,'</div>','<div class="fs-6">',Componenti,'</div>') as Team,[Posizione Prova 2],,[Score 2] FROM [Open] order by [Posizione Prova 2],,[Score 2] 
+ 

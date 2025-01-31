@@ -9,7 +9,7 @@ class caricaDati extends dbConnect{
             $this->iniziaTransazione();
             $colonne='';
             $q = "DROP TABLE [$categoria]";
-            $rs = $this->eseguiQuery($q);
+            $rs = $this->eseguiQuery($q,false,'bool',true);
             // if ($rs == false) {
             //     throw new Exception("Errore cancellazione tabella");
             // }
