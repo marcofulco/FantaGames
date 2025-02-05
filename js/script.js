@@ -31,14 +31,20 @@ window.addEventListener('load', function () {
             attivaAlert('Caricare un file valido!'.toUpperCase(), 'Attenzione', '', '');
             return;
         }
+        let tabella=JSON.stringify(dataTabella)
+        tabella=tabella.replace(/'/g, "''");
+        tabella=tabella.replace(/&/g, "^");
+        tabella=JSON.parse(tabella);
         let jSonRichiesta = {
             "azione": "caricaDati",
-            "dati": dataTabella,
+            "dati": tabella,
             "categoria": document.getElementById('categoria').value,
         }
         call(jSonRichiesta,(res)=>{
             if(res.error==''){
                 attivaAlert('Dati caricati correttamente!'.toUpperCase(), 'Successo', '', '');
+            }else{
+                attivaAlert(res.error, 'Errore', '', '');
             }
             //pulisco la tabella e nascondo il contenitore
             document.getElementById('contenitoreTabella').innerHTML='';

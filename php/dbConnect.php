@@ -106,7 +106,10 @@ class dbConnect
 
             $error .= 'ERRORE SQL -' . $testo;
             $this->logTxt($testo, 'ECCEZIONE PDO');
-
+        if($consentiErrori==false){
+            $error = '';
+            return false;
+        }
             return false;
         }
     }

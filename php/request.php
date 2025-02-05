@@ -12,8 +12,9 @@ if(isset($_POST['jSonRichiesta'])==false)
     global $error;
     if(isset($request->azione)==false)
     {
-        echo "Errore: azione non valida";
-        die();
+        $error.="Errore: azione non valida".json_encode($request);
+        $res=false;
+        goto fine;
     }
 
     $azione=$request->azione;
@@ -23,6 +24,8 @@ if(isset($_POST['jSonRichiesta'])==false)
             require_once('caricaDati.php');
             $caricaDati=new caricaDati();
             $dati=$request->dati;
+            $dati=str_replace('^','&', json_encode($dati));
+            $dati=json_decode($dati);
             $res=$caricaDati->carica($dati,$categoria);
             break;
         case 'leggiDati':
@@ -32,6 +35,7 @@ if(isset($_POST['jSonRichiesta'])==false)
             $res=$leggiDati->leggi($categoria,$classifica);
             break;
     }
+    fine:
     echo elaboraRisposta($res);
     function elaboraRisposta($res){
         $risposta=[];
