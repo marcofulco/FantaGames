@@ -214,3 +214,15 @@
  21:21:04 04/02/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Rx' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
  DROP TABLE [Rx] 
  
+ 20:01:12 07/02/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Rx' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Rx] 
+ 
+ 20:05:30 07/02/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Rx' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Rx] 
+ 
+ 20:06:18 07/02/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Open' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Open] 
+ 
+ 20:06:36 07/02/2025 - ECCEZIONE PDO - D:\xampp\htdocs\FantaGames\php\dbConnect.php#75 - 42S02: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Non è possibile eliminare l'oggetto 'Experience' di tipo tabella, perché inesistente o perché non si dispone dell'autorizzazione.
+ DROP TABLE [Experience] 
+ 

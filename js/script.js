@@ -111,7 +111,7 @@ window.addEventListener('load', function () {
     }));
     this.document.getElementById('pulisciCampoCerca').addEventListener('click', function () {
         document.getElementById('campoCerca').value = '';
-        let dati = ddocument.getElementById('contenitoreTabella').querySelectorAll('table tbody tr')
+        let dati = document.getElementById('contenitoreTabella').querySelectorAll('table tbody tr')
         for (var i = 0; i < dati.length; i++) {
             dati[i].style.display = "";
         }
